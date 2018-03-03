@@ -91,8 +91,8 @@ let rec setify (l : 'a list) : 'a list =
   List.fold_left (fun a h -> if mem h l then a else h :: a) [] l
 
 (* Q7 *)
-let rev (l : 'a list) : 'a list =
-  List.fold_left (fun a h -> h :: a) [] l
+let rev : 'a list -> 'a list =
+  List.fold_left (fun a h -> h :: a) []
 
 (* Q3 -- back to this now that rev is better *)
 let palindromeify (l : 'a list) : 'a list = l @ rev l
